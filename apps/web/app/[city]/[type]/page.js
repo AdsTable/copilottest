@@ -1,7 +1,7 @@
 // SEO-first micro-landing with SSR and JSON-LD.
 // In production, prefer ISR (revalidate) for bots and cache friendliness.
+import { notFound } from "next/navigation";
 import { RealEstateItemListJsonLd } from "../../../lib/seo/jsonld";
-
 export async function generateStaticParams() {
   // Pre-render the most important combinations for immediate UX.
   return [
